@@ -33,12 +33,11 @@ parser.add_argument('--save_dir',
                     help='Directory for detect result')
 parser.add_argument('--model',
                     type=str,
-                    default='weights/dsfd_face.pth', help='trained model')
+                    default='weights/dsfd_vgg_0.880.pth', help='trained model')
 parser.add_argument('--thresh',
                     default=0.4, type=float,
                     help='Final confidence threshold')
 args = parser.parse_args()
-
 
 if not os.path.exists(args.save_dir):
     os.makedirs(args.save_dir)
